@@ -4,7 +4,7 @@ TEST_MODE set to True, runs rests in silent mode: no UI while testing
 import os
 
 URL = {
-    'Test_mode': True,
+    'Test_mode': False,
     'URL_HOST': 'http://34.65.101.58:5002',
     'Home_URL': 'http://34.65.101.58:5002/home/events?page=1',
     'Browser': 'Firefox'
@@ -33,12 +33,12 @@ PROFILE_MENU_INFO = {
     'User_age_label': 'Age',
     'User_age_data': '35',
     'User_gender_label': 'Gender:',
-    'User_gender_data': 'Other',
+    'User_gender_data': 'Female',
     'User_email_label': 'Email:',
     'User_email_data': 'user@gmail.com',
     'User_interests_label': 'Interests:',
-    'User_interests_data': {'Mount', 'Golf', '#Team-Building', '#Swimming',
-                            '#Gaming', '#Sea', '#Summer'}
+    'User_interests_data': {'Mount', 'Golf', 'Team-Building', 'Swimming',
+                            'Gaming', 'Sea', 'Summer'}
     }
 
 """This test data using for creating event"""
@@ -104,10 +104,30 @@ CREATE_EVENT_SQL = {
         }
 
 """
-data for create message
+data for create message using api
 """
 SEND_MESSAGE_SQL = {
     'id_sender': '038F157B-C102-4578-6CFB-08D7A28D1878',
     'text': 'test message',
     'chat_room_id': 'f723480e-ad42-4ecb-fa3e-08d7a318593f'
+}
+
+"""
+data for comuna test
+"""
+INFO_MESSAGE_COMUNA = {
+    'message_to_sent': 'hey',
+    'verify_message': 'You have 1 unread messages'
+}
+
+INFO_REGISTRATION = {
+    'email_for_register': 'katya@gmail.com',
+    'password_for_register': 'popalava09',
+    'existing_mail': 'user@gmail.com',
+    'warning_message_about_exists_email': 'Email already exists in database',
+    'invalid_mail': 'usermail.com',
+    'warning_message_about_invalid_mail': 'Invalid email address',
+    'mail_for_invalid_pass': 'new@gmail.com',
+    'invalid_pass': '111',
+    'warning_message_about_invalid_pass': 'Must be 6 characters or more'
 }
