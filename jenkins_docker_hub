@@ -44,7 +44,7 @@ pipeline {
             steps {
                 echo " ============== del pyslim & python images =================="
                 sh '''
-                docker rmi svdior/pyslim:latest python:3.7 -f
+                docker rmi svdior/graduation:latest python:3.7 -f
                 '''
         }
     } 
