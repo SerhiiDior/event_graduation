@@ -14,11 +14,13 @@ RUN apt-get update\
     && rm -rf /var/lib/apt/lists/*
 
 
-RUN apt-get install xvfb -y
+
 
 # Install Firefox browser
 RUN apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
 RUN apt update && apt install -y firefox
+
+RUN apt-get install xvfb firefox -y
 
 RUN pip install -r requirements.txt
 
