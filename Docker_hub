@@ -14,8 +14,7 @@ RUN apt-get update\
 
 
 # Install Firefox browser
-RUN apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/
-ubuntu bionic main"
+RUN apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
 RUN apt update && apt install -y firefox
 
 RUN pip install -r requirements.txt
